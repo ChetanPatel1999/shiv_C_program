@@ -1,1 +1,1 @@
-;
+printf("your entry is not allowed in club");
