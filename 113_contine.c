@@ -9,7 +9,7 @@ void main()
             i++;//6
             continue;
         }
-        printf("%d \n", i);  // 1 2 3 4  6 
+        printf("%d \n", i);  // 
         i++;//7
     }
 }

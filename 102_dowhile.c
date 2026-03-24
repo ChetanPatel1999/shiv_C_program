@@ -10,12 +10,13 @@ void main()
         printf("welcome to club ...\n");
         do
         {
+        lable:
             printf("club menue: \n");
             printf("1. pizza : 250\n");
             printf("2. burger : 199\n");
             printf("3. cold cofee :  99\n");
             printf("choose any item : ");
-            scanf("%d", &order); // 2
+            scanf("%d", &order); // 6
             switch (order)
             {
             case 1:
@@ -31,8 +32,8 @@ void main()
                 scanf("%d", &q);
                 printf("\nyour %d burger is orderd \n", q);
 
-                totalBill = totalBill + 199*q;
-                b=b+q;
+                totalBill = totalBill + 199 * q;
+                b = b + q;
                 printf("pizza = %d burger = %d cold coffi = %d \n\n", a, b, c);
                 break;
             case 3:
@@ -40,12 +41,13 @@ void main()
                 scanf("%d", &q);
                 printf("\nyour %d cold cofee is orderd \n", q);
 
-                totalBill = totalBill + 99*q;
-                c=c+q;
+                totalBill = totalBill + 99 * q;
+                c = c + q;
                 printf("pizza = %d burger = %d cold coffi = %d \n\n", a, b, c);
                 break;
             default:
-                printf("wrong input please enter 1 to 3\n\n");
+                printf("\nwrong input please enter 1 to 3\n\n");
+                goto lable;
             }
 
             printf("you want to order something more  press 1 otherwise press any character to exit : ");
