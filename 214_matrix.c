@@ -1,5 +1,6 @@
+//  Write a program to find the transpose of a matrix.
 #include <stdio.h>
-void main()
+int main()
 {
     int r, c;
     printf("enter no of row : ");
@@ -29,28 +30,14 @@ void main()
         printf("\n");
     }
 
-    int ec = 0, oc = 0;
-    printf("matrix even element are : \n");
+    printf("transpose matrix element are : \n");
 
     for (i = 0; i < r; i++) // 2
     {
         for (j = 0; j < c; j++) // 3
         {
-            if (mat[i][j] % 2 == 0)
-            {
-                printf("%d ", mat[i][j]);
-                ec++;
-            }
-            else
-            {
-                printf("0 ");
-                oc++;
-            }
+            printf("%d ", mat[j][i]);
         }
         printf("\n");
     }
-
-
-    printf("total even element in matrix : %d\n",ec);
-    printf("total odd element in matrix : %d\n",oc);
 }

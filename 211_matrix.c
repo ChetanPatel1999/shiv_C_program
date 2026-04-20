@@ -1,3 +1,4 @@
+//  Write a program to find and display only main diagonal element of a matrix. 
 #include <stdio.h>
 void main()
 {
@@ -29,28 +30,28 @@ void main()
         printf("\n");
     }
 
-    int ec = 0, oc = 0;
-    printf("matrix even element are : \n");
-
-    for (i = 0; i < r; i++) // 2
+    if (r == c)
     {
-        for (j = 0; j < c; j++) // 3
+        printf("matrix main dignoal element : \n");
+
+        for (i = 0; i < r; i++) // 2
         {
-            if (mat[i][j] % 2 == 0)
+            for (j = 0; j < c; j++) // 3
             {
-                printf("%d ", mat[i][j]);
-                ec++;
+                if (i == j)
+                {
+                    printf("%d ", mat[i][j]);
+                }
+                else
+                {
+                    printf("0 ");
+                }
             }
-            else
-            {
-                printf("0 ");
-                oc++;
-            }
+            printf("\n");
         }
-        printf("\n");
     }
-
-
-    printf("total even element in matrix : %d\n",ec);
-    printf("total odd element in matrix : %d\n",oc);
+    else
+    {
+        printf("matrix is not square matrix");
+    }
 }

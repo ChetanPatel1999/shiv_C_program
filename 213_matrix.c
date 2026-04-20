@@ -1,5 +1,6 @@
+//  Write a program to find and display the sum of each row and each column of a matrix. 
 #include <stdio.h>
-void main()
+int main()
 {
     int r, c;
     printf("enter no of row : ");
@@ -29,28 +30,22 @@ void main()
         printf("\n");
     }
 
-    int ec = 0, oc = 0;
-    printf("matrix even element are : \n");
-
+    printf("matrix with row colum sum : \n");
+    int rsum;
+    int csum;
     for (i = 0; i < r; i++) // 2
     {
+        rsum = 0;
+        csum = 0;
         for (j = 0; j < c; j++) // 3
         {
-            if (mat[i][j] % 2 == 0)
-            {
-                printf("%d ", mat[i][j]);
-                ec++;
-            }
-            else
-            {
-                printf("0 ");
-                oc++;
-            }
+            printf("%d ", mat[i][j]);
+            rsum = rsum + mat[i][j];
+            csum = csum + mat[j][i];
         }
+        printf("--->sum r%d = %d ", i + 1, rsum);
+        printf("--->sum c%d = %d", i + 1, csum);
         printf("\n");
     }
 
-
-    printf("total even element in matrix : %d\n",ec);
-    printf("total odd element in matrix : %d\n",oc);
 }
