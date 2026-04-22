@@ -1,4 +1,4 @@
-//when we increase pointer value by one so its increase by 4 if pointer is integer.
+// when we increase pointer value by one so its increase by 4 if pointer is integer.
 #include <stdio.h>
 void main()
 {
