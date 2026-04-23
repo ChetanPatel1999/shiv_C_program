@@ -1,10 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 void main()
 {
-    int arr[5]; // 20 byte memory allocate
-    int *ptr, i;
-    ptr = &arr[0];
-
+    int *ptr, *temp, i;
+    ptr = malloc(20);
+    temp = ptr;
     printf("enter arry element : \n");
     for (i = 0; i < 5; i++)
     {
@@ -12,8 +12,8 @@ void main()
         ptr++; // 420
     }
 
-    ptr = &arr[0];
     // ptr = ptr - 5;
+    ptr = temp;
 
     printf("array element are : \n");
     for (i = 0; i < 5; i++)
