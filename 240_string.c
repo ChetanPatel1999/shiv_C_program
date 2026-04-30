@@ -14,7 +14,7 @@ void main()
     }
 
     printf("reverse string : ");
-    for (i = c - 1; i >= 0; i--)//-1
+    for (i = c - 1; i >= 0; i--) //0
     {
         printf("%c", str[i]);
     }
